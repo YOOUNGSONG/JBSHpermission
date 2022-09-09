@@ -6,6 +6,7 @@ app_name = 'pybo'
 urlpatterns = [
     path('', views.start, name='start'),
     path('main/', views.main, name='main'),
-    path('create/', views.create, name='create'),
-    path('join/', views.join, name='join'),
+    path('main/create/', views.create, name='create'),
+    path('main/join/', views.join, name='join'),
+    path('usercheck/', views.user, name='usercheck')
 ]

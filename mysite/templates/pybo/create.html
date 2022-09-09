@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>허가원 개설</title>
+</head>
+<body>
+    <table class="table">
+        <thead>
+        <tr class="thead-dark">
+            <th>작성일시</th>
+            <th>{{ time }}</th>
+        </tr>
+        <tr>
+            <th>활동명</th>
+            <th><input type="text"> </th>
+        </tr>
+        <tr>
+            <th>지도교사</th>
+            <th>
+                <select>
+                    <!-- for문으로 대체 -->
+                    <option>나는</option>
+                    <option>영송</option>
+                </select>
+                선생님
+            </th>
+        </tr>
+        <tr>
+            <th>교시</th>
+            <th>
+                <select>
+                    <option>1, 2교시</option>
+                    <option>1교시</option>
+                    <option>2교시</option>
+                </select>
+            </th>
+        </tr>
+        <tr>
+            <th>교실</th>
+            <th>
+                {% if classrooms %}
+                    <select>
+                        {% for room in classrooms %}
+                        <option> {{ room }} </option>
+                        {% endfor %}
+                        <option>수학교과교실</option>
+                        <option>무한상상실</option>
+                    </select>
+                {% else %}
+                    <p>No Classrooms.</p>
+                {% endif %}
+            </th>
+        </tr>
+        <tr>
+            <th>대표 학생</th>
+        </tr>
+        </thead>
+    </table>
+    <input type="submit" value="submit">
+</body>
+</html>
