@@ -10,8 +10,8 @@ class Classroom(models.Model):
 
 
 class User(models.Model):
-    name = models.CharField(max_length=10)
     num = models.IntegerField()
+    name = models.CharField(max_length=10)
 
     def __str__(self):
-        return self.num, self.name
+        return f"{self.num} {self.name}"
